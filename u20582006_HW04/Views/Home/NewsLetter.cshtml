@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "NewsLetter";
+}
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head><body>
+<h2>Energy Loop NewsLetter</h2>
+
+<p>Stay in the loop by subscribing to our newsletter featuring our latest insights, recent news and top research</p>
+<br>
+
+<!--Submit newsletter information-->
+<div class="row">
+    <form>
+            <div class="column, col-lg-6, col-md-4">
+                <label for="fname">First name</label><br>
+                <input type="text" id="fname" name="fname"><br>
+            </div>
+            <div class="column, col-lg-6, col-md-4">
+                <label for="lname">Last name</label><br>
+                <input type="text" id="lname" name="lname"><br>
+            </div>
+            <div class="column, col-lg-6, col-md-4">
+                <label for="cname">Company</label><br>
+                <input type="text" id="cname" name="cname"><br>
+            </div>
+            <div class="column, col-lg-6, col-md-4">
+                <label for="jtitle">Job Title</label><br>
+                <input type="text" id="jtitle" name="jtitle"><br>
+            </div>
+            <div class="column, col-lg-6, col-md-4">
+                <label for="email">Email</label><br>
+                <input type="text" id="email" name="email"><br>
+            </div>
+            <input type="checkbox" id="Subsribe" name="Sub" value="Subscribe"><br><br>
+            <input class="btn-primary" type="submit" value="Submit">
+    </form>
+</div>
+    </body>
