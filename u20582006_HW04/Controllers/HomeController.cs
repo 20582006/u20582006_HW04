@@ -8,22 +8,18 @@ namespace u20582006_HW04.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public ActionResult Home()
         {
             return View();
         }
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Newsletter()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }
