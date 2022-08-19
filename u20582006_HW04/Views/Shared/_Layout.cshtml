@@ -8,7 +8,16 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <!--<nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="/logo.jpg" height="50" alt="">
+        </a>
+    </nav>
+    <ul class="nav navbar-nav">
+        <li>Html.ActionLink("About Us", "About", "Home")</li>
+        <li>Html.ActionLink("Newsletter sign up", "Newsletter", "Home")</li>
+    </ul>-->
+    <div class="navbar navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -16,24 +25,42 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Hello MVC", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Home", "Home", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Home", "Home")</li>
-                    <li>@Html.ActionLink("About Us", "About", "Home")</li>
-                    <li>@Html.ActionLink("Newsletter sign up", "Newsletter", "Home")</li>
-                </ul>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("About Us", "About", "Home")</li>
+                        <li>@Html.ActionLink("Sign Up", "Newsletter", "Home")</li>
+                    </ul>
+                </div>
             </div>
+            <div class="topnav-right">
+                <a href="home.cshtml">
+                    <img src="~/logo.jpg" class="img-center" height="50" />
+                </a>
+            </div>
+            
+
         </div>
     </div>
-                    
+            
     <div class="container body-content">
         @RenderBody()
+        <hr />
+        <footer>
+            <center>
+                <p>
+                    <a href="/u20582006_HW04/Narrative(u20582006).pdf">Use Case Narratives</a><br>
+                    <a href="/u20582006_HW04/ClassStructure(u20582006).pdf">Class Structure Diagrams</a>
+                </p>
+            </center>
+        </footer>
     </div>
-
+    
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+
 </body>
 </html>

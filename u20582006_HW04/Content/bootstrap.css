@@ -9,9 +9,44 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
+
 body {
-  margin: 0;
+    margin: 0;
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
+
+.hr-lines {
+    position: relative;
+    max-width: 500px;
+    margin: 150px auto;
+    text-align: center;
+}
+
+.hr-lines:before {
+        content: " ";
+        height: 2px;
+        width: 130px;
+        background: black;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+}
+
+.hr-lines:after {
+        content: " ";
+        height: 2px;
+        width: 130px;
+        background: black;
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+}
+
 article,
 aside,
 details,
@@ -4353,6 +4388,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   padding: 15px 15px;
   font-size: 18px;
   line-height: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 .navbar-brand:hover,
 .navbar-brand:focus {
