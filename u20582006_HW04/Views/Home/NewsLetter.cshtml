@@ -1,4 +1,5 @@
-﻿<!--model u20582006_HW04.Models.Newsletter
+﻿@model List<u20582006_HW04.Models.Links>
+<!--model u20582006_HW04.Models.Newsletter
 model u20582006_HW04.Models.Links -->
 <head>
     <style>
@@ -29,7 +30,8 @@ model u20582006_HW04.Models.Links -->
     <br>
 
     <!--Submit newsletter information-->
-    <form>
+    @using (Html.BeginForm("Newsletter", "Continent", FormMethod.Post))
+    {
 
         <div class="row">
             <div class="column, col-lg-6, col-md-4">
@@ -55,10 +57,10 @@ model u20582006_HW04.Models.Links -->
             <br>
         </div>
         <center>
-            <input class="btn-primary" type="submit" value="Submit" <!--(Call void method to display email)--> >
+            <input class="btn-primary" type="submit" value="Submit" <!--(Call void method to display email and business)--> >
         </center>
-    </form>
+    }
 
-    <!--User is linked to a NPO through continent-->
+        <!--User is linked to a NPO through continent-->
 
-</body>
+    </body>

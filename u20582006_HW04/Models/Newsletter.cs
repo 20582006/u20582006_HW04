@@ -2,26 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using u20582006_HW04.Models;
 
 namespace u20582006_HW04.Models
 {
     public class Newsletter : User
     {
-        public string _Company { get; set; }
-        public string _JobTitle { get; set; }
+        public string _Continent { get; set; }
         public string _Email { get; set; }
 
-        public Newsletter(string FirstName, string LastName, string Company, string JobTitle, string Email) : base(FirstName, LastName)
+        public Newsletter(string FirstName, string LastName, string Continent, string Email) : base(FirstName, LastName)
         {
-            _Company = Company;
-            _JobTitle = JobTitle;
+            _Continent = Continent;
             _Email = Email;
-        }
-
-        public string JobTitle
-        {
-            get { return JobTitle; }
-            set { _JobTitle = value; }
         }
 
         public string Email
@@ -30,15 +23,22 @@ namespace u20582006_HW04.Models
             set { _Email = value; }
         }
 
-        public override string Info()
+        public string Continent
         {
-            return "Newsletter infromation";
+            get { return Continent; }
+            set { _Continent = value; }
         }
 
-        //Abstract method retrieval
+        //Infromation on people you are goin to work with
+        public override string Info()
+        {
+            return "The business name is" + BusinessClosest() + ;
+        }
+
+        //Succesfull subscription message
         public override string Message()
         {
-            return "Message about newsletter";
+            return "You are succesfully subscribed to the newsletter! Here is information regarding the people closest to you that you can work with";
         }
     }
 }

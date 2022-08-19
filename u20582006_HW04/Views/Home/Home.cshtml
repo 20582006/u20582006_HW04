@@ -1,4 +1,4 @@
-﻿@model u20582006_HW04.Models.Donate
+﻿@model u20582006_HW04.Models
 <head>
     <style>
         h1 {
@@ -31,13 +31,15 @@
         <h1> Center for Sustainable energy <br> International</h1>
         <br>
     </header>
+
     <p class="container">
     <p>
         Dem words doe
     </p><br>
 
     <!--Donation form information-->
-    <form style="margin: 5px; border: black; border-width: 5px; border-style: outset" type="submit">
+    @using (Html.BeginForm("Home", "Home", FormMethod.Post))
+    {
         <fieldset>
             <Legend>Click Here to donate</Legend>
 
@@ -65,10 +67,21 @@
             </center>
 
         </fieldset>
-    </form>
+    }
 
+    <!--Succeful payment message sent back-->
+    @if (ViewBag.Message != null)
+    {
+        <p>Peepee poopoo</p>
+        <script>
+            $(document).ready(function(){
+            alert('>@User.Info()');
+            });
+        </script>
+        <p>@User.Message()</p>
+    }
     <hr />
-    
+
     <footer>
         <center>
             <p>

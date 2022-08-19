@@ -20,10 +20,10 @@ namespace u20582006_HW04.Models
             set { _Amount = value; }
         }
 
-        //Virtual method retrieval
+        //Message 
         public override string Info()
         {               
-            return "Donation information";
+            return " Your donation of" + ;
         }
 
         //Abstract method retrieval
