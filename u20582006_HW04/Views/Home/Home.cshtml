@@ -1,18 +1,82 @@
-﻿@{
-    ViewBag.Title = "Home";
-}
-
-<h2>Center for Sustainable energy <br> International</h2>
-
+﻿@model u20582006_HW04.Models.Donate
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        h1 {
+            text-align: center;
+            margin-top: 100px;
+            font-size: 50px
+        }
+
+        form {
+            display: table;
+        }
+
+        p {
+            display: table-row;
+            margin: 5px;
+        }
+
+        label {
+            display: table-cell;
+        }
+
+        input {
+            display: table-cell;
+        }
+    </style>
 </head>
+
 <body>
-    <div class="container">
-        <p>
-            Dem words doe
-        </p>
-    </div>
+    <header>
+        <h1> Center for Sustainable energy <br> International</h1>
+        <br>
+    </header>
+    <p class="container">
+    <p>
+        Dem words doe
+    </p><br>
+
+    <!--Donation form information-->
+    <form style="margin: 5px; border: black; border-width: 5px; border-style: outset" type="submit">
+        <fieldset>
+            <Legend>Click Here to donate</Legend>
+
+            <p>
+                <label for="fname">First name</label>
+                <input type="text" id="fname" name="fname"><br><br>
+            </p>
+            <p>
+                <label for="lname">Last name</label>
+                <input type="text" id="lname" name="lname"><br><br>
+            </p>
+            <p>
+                <label for="pType" width="20px">Payment type</label>
+                <select id="pType" name="PayType">
+                    <option value="PayPal">Paypal</option>
+                    <option value="Card">Card</option>
+                </select><br><br>
+            </p>
+            <p>
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" name="amount" value="0"><br><br>
+            </p>
+            <center>
+                <input class="btn-primary" type="submit" value="Submit">
+            </center>
+
+        </fieldset>
+    </form>
+
+    <hr />
+    
+    <footer>
+        <center>
+            <p>
+                <a href="./u20582006_HW04/Narrative(u20582006).pdf">Use Case Narratives</a><br>
+                <a href="./u20582006_HW04/ClassStructure(u20582006).pdf">Class Structure Diagrams</a>
+            </p>
+        </center>
+    </footer>
 
     <!-- Additional -->
     <script src="https://kit.fontawesome.com/47ada06d18.js" crossorigin="anonymous"></script>

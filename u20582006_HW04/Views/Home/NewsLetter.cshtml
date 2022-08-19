@@ -1,8 +1,5 @@
-﻿@model u20582006_HW04.Models.Newsletter;
-
-@{
-    ViewBag.Title = "NewsLetter";
-}
+﻿<!--model u20582006_HW04.Models.Newsletter
+model u20582006_HW04.Models.Links -->
 <head>
     <style>
         * {
@@ -10,8 +7,8 @@
         }
 
         .column {
-            float: left;
-            width: 50%;
+            float: float;
+            width: 30%;
             padding: 10px;
         }
 
@@ -21,15 +18,20 @@
             clear: both;
         }
     </style>
-</head><body>
-<h2>Energy Loop NewsLetter</h2>
+</head>
+<body>
+    <h1 class="hr-lines">NewsLetter</h1>
 
-<p>Stay in the loop by subscribing to our newsletter featuring our latest insights, recent news and top research</p>
-<br>
+    <p>
+        Stay in the loop by subscribing to our newsletter featuring our latest insights, recent news and top research<br>
+        By signing up to our newsletter we will link you up to an organisation near you
+    </p>
+    <br>
 
-<!--Submit newsletter information-->
-<div class="row">
+    <!--Submit newsletter information-->
     <form>
+
+        <div class="row">
             <div class="column, col-lg-6, col-md-4">
                 <label for="fname">First name</label><br>
                 <input type="text" id="fname" name="fname"><br>
@@ -50,8 +52,13 @@
                 <label for="email">Email</label><br>
                 <input type="text" id="email" name="email"><br>
             </div>
-            <input type="checkbox" id="Subsribe" name="Sub" value="Subscribe"><br><br>
-            <input class="btn-primary" type="submit" value="Submit">
+            <br>
+        </div>
+        <center>
+            <input class="btn-primary" type="submit" value="Submit" <!--(Call void method to display email)--> >
+        </center>
     </form>
-</div>
-    </body>
+
+    <!--User is linked to a NPO through continent-->
+
+</body>

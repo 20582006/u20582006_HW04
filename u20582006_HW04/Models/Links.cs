@@ -7,19 +7,19 @@ namespace u20582006_HW04.Models
 {
     public class Links : User
     {
-        public string _Country { get; set; }
+        public string _Continent { get; set; }
         public string _Organisation { get; set; }
 
-        public Links(string FirstName, string LastName, string Country, string Organisation) : base(FirstName, LastName)
+        public Links(string FirstName, string LastName, string Continent, string Organisation) : base(FirstName, LastName)
         {
-            _Country = Country;
+            _Continent = Continent;
             _Organisation = Organisation;
         }
 
-        public string Country
+        public string Continent
         {
-            get { return Country; }
-            set { _Country = value; }
+            get { return Continent; }
+            set { _Continent = value; }
         }
         public string Organisation
         {
