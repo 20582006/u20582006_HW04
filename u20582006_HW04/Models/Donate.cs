@@ -20,16 +20,16 @@ namespace u20582006_HW04.Models
             set { _Amount = value; }
         }
 
-        //Message 
+        //Message thanking donator
         public override string Info()
         {               
-            return " Your donation of" + ;
+            return " Your donation of" + Amount + "Is greatly appreciated and will help many people";
         }
 
-        //Abstract method retrieval
+        //Message after donation
         public override string Message()
         {
-            return "Message about donation";
+            return "Feel free to sign up for our newsletter and get frequent updates on how we use your money for the greater good";
         }
     }
 }

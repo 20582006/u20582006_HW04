@@ -1,4 +1,4 @@
-﻿@model u20582006_HW04.Models
+﻿@model u20582006_HW04.Models.User
 <head>
     <style>
         h1 {
@@ -69,16 +69,12 @@
         </fieldset>
     }
 
-    <!--Succeful payment message sent back-->
+    <!-- Call messages -->
     @if (ViewBag.Message != null)
     {
-        <p>Peepee poopoo</p>
-        <script>
-            $(document).ready(function(){
-            alert('>@User.Info()');
-            });
-        </script>
-        <p>@User.Message()</p>
+        <p>peepee poopoo</p>
+        <!--<p>User.Info()</p>
+        <p>User.Message()</p>-->
     }
     <hr />
 

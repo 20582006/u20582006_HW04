@@ -32,13 +32,13 @@ namespace u20582006_HW04.Models
         //Infromation on people you are goin to work with
         public override string Info()
         {
-            return "The business name is" + BusinessClosest() + ;
+            return base.Info() + ", " +base.FirstName + "! By signing up for the newletter you can help spread our reach and help others around you.";
         }
 
         //Succesfull subscription message
         public override string Message()
         {
-            return "You are succesfully subscribed to the newsletter! Here is information regarding the people closest to you that you can work with";
+            return "Based";
         }
     }
 }

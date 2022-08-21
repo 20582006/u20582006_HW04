@@ -1,6 +1,4 @@
-﻿@model List<u20582006_HW04.Models.Links>
-<!--model u20582006_HW04.Models.Newsletter
-model u20582006_HW04.Models.Links -->
+﻿
 <head>
     <style>
         * {
@@ -30,7 +28,7 @@ model u20582006_HW04.Models.Links -->
     <br>
 
     <!--Submit newsletter information-->
-    @using (Html.BeginForm("Newsletter", "Continent", FormMethod.Post))
+    @using (Html.BeginForm("Newsletter", "Home", FormMethod.Post))
     {
 
         <div class="row">
@@ -43,12 +41,8 @@ model u20582006_HW04.Models.Links -->
                 <input type="text" id="lname" name="lname"><br>
             </div>
             <div class="column, col-lg-6, col-md-4">
-                <label for="cname">Company</label><br>
+                <label for="cname">Continent</label><br>
                 <input type="text" id="cname" name="cname"><br>
-            </div>
-            <div class="column, col-lg-6, col-md-4">
-                <label for="jtitle">Job Title</label><br>
-                <input type="text" id="jtitle" name="jtitle"><br>
             </div>
             <div class="column, col-lg-6, col-md-4">
                 <label for="email">Email</label><br>
@@ -57,10 +51,17 @@ model u20582006_HW04.Models.Links -->
             <br>
         </div>
         <center>
-            <input class="btn-primary" type="submit" value="Submit" <!--(Call void method to display email and business)--> >
+            <input class="btn-primary" type="submit" value="Submit" />
         </center>
     }
 
-        <!--User is linked to a NPO through continent-->
+    <!-- Call messages -->
+    @if (ViewBag.Message != null)
+    {
+        <p>Peepoo</p>
+        <!--<p>User.Info()</p>
+        <p>User.Message()</p>-->
+    }
 
-    </body>
+
+</body>

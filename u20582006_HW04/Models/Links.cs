@@ -27,16 +27,17 @@ namespace u20582006_HW04.Models
             set { _Organisation = value; }
         }
 
-        //Virtual metoh retrieval
+        //This class only handles the information about the organisations and no messages will be sent from this class
+        //------------------------------------------------------------------------------------------------------------
         public override string Info()
         {
-            return "Linked business info";
+            return ".";
         }
 
-        //Abstract method retrieval
+        //Message() will not be called but is an abstract class so is needed
         public override string Message()
         {
-            return "Message about business info";
+            return "Placeholder";
         }
     }
 }
