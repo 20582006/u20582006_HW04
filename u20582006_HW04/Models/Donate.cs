@@ -7,7 +7,7 @@ namespace u20582006_HW04.Models
 {
     public class Donate : User
     {
-        private double _Amount { get; set; }
+        public double _Amount { get; set; }
 
         public Donate (string FirstName, string LastName, double Amount) : base(FirstName, LastName) 
         {

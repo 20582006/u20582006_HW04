@@ -10,14 +10,6 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-body {
-    margin: 0;
-    background-image: url('background.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
-
 .hr-lines {
     position: relative;
     max-width: 500px;
@@ -1117,12 +1109,16 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #333333;
-  background-color: #fff;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: url('~/background.jpg');
+    margin: 0;
 }
+
 input,
 button,
 select,
@@ -1131,6 +1127,7 @@ textarea {
   font-size: inherit;
   line-height: inherit;
 }
+
 a {
   color: #337ab7;
   text-decoration: none;
@@ -4276,9 +4273,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar {
   position: relative;
-  min-height: 50px;
-  margin-bottom: 20px;
-  border: 1px solid transparent;
 }
 @media (min-width: 768px) {
   .navbar {
@@ -4701,15 +4695,15 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #ccc;
 }
 .navbar-inverse {
-  background-color: #222;
-  border-color: #080808;
+  background-color: #fff;
+  border-color: black;
 }
 .navbar-inverse .navbar-brand {
-  color: #9d9d9d;
+  color: navy;
 }
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
-  color: #fff;
+  color: black;
   background-color: transparent;
 }
 .navbar-inverse .navbar-text {

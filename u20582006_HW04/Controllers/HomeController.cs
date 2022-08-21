@@ -39,8 +39,6 @@ namespace u20582006_HW04.Controllers
         public ActionResult Newsletter(string Msg)
         {
             GetContData();
-            Msg = "Placeholder";
-            ViewBag.Message = Msg;
             return View();
        
         }
@@ -49,12 +47,12 @@ namespace u20582006_HW04.Controllers
         private List<Links> GetContData()
         {
             List<Links> Contacts = new List<Links>();
-            Links L1 = new Links("June", "Laphela", "Africa", "hubba.org");
-            Links L2 = new Links("Ju", "Lin", "Asia", "chingchong.org");
-            Links L3 = new Links("Julie", "Luffy", "Australia", "boomrang.org");
-            Links L4 = new Links("Juliana", "Linette", "Europe", "baguette.org");
-            Links L5 = new Links("Jean", "Lead", "North America", "Burgers.org");
-            Links L6 = new Links("Junai", "Linelli", "South America", "Soccer.org");
+            Links L1 = new Links("John", "Dallman", "Africa", "info.southafrica@emiworld.org");
+            Links L2 = new Links("Paul", "Davis", "Asia", "info@abwe.org");
+            Links L3 = new Links("Scott", "Rayberg", "Australia", "info@ewb.org.au");
+            Links L4 = new Links("Phil", "Garner", "Europe", "secretariat.general@feani.org");
+            Links L5 = new Links("David", "Steinman", "North America", "info@nspe.org");
+            Links L6 = new Links("Stephen", "Knight", "South America", "info@volunteerlatinamerica.com");
 
             Contacts.Add(L1);
             Contacts.Add(L2);

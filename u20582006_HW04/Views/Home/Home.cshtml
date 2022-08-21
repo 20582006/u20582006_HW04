@@ -24,6 +24,30 @@
         input {
             display: table-cell;
         }
+
+        #jumbotron {
+            display: flex;
+            justify-content: flex-end;
+            border-style: solid;
+            border-color: black;
+            padding: 5px;
+            width: 350px;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        .leftBlock {
+            display: flex;
+            width: 800px;
+        }
+
+        a{
+            color: inherit;
+        }
+
+        select{
+            width:175px;
+        }
     </style>
 </head>
 
@@ -33,56 +57,73 @@
         <br>
     </header>
 
-    <p class="container">
-    <p>
-        Dem words doe
-    </p><br>
+    <center>
+        <h4 class="text-center, hr-lines">How we help</h4>
+
+        <br>
+
+        <p>
+            We are The Center for Sustainable Energy International. Working alongside our parent company <a href="@Url.Content("https://energycenter.org/")">The Center for Sustainable Energy</a> we are commited to providing affordable, reliable, sustainable and modern energy for all. For too long only more developed countries could receive the luxuries of clean energy but we are branching out to the rest of the world to help and reach the <a href="@Url.Content("https://sdgs.un.org/goals/goal7")">goal 7</a> as stated by the United Nations.
+            <br><br>
+            We are a nonprofit with one mission: Decarbonize. <br> The Center for Sustainable Energy (CSE) is a national nonprofit that is transforming markets for clean transportation and distributed energy through software-enabled program design and administration. Our vision is a future with sustainable, equitable and resilient transportation, buildings and communities.
+        </p>
+    </center>
+    <br>
 
     <!--Donation form information-->
-    @using (Html.BeginForm("Home", "Home", FormMethod.Post))
-    {
-        <fieldset>
-            <Legend>Click Here to donate</Legend>
+    <div id="jumbotron">
+        @using (Html.BeginForm("Home", "Home", FormMethod.Post))
+        {
+            <fieldset>
+                <Legend style="color=white">Donation</Legend>
 
-            <p>
-                <label for="fname">First name</label>
-                <input type="text" id="fname" name="fname"><br><br>
-            </p>
-            <p>
-                <label for="lname">Last name</label>
-                <input type="text" id="lname" name="lname"><br><br>
-            </p>
-            <p>
-                <label for="pType" width="20px">Payment type</label>
-                <select id="pType" name="PayType">
-                    <option value="PayPal">Paypal</option>
-                    <option value="Card">Card</option>
-                </select><br><br>
-            </p>
-            <p>
-                <label for="amount">Amount</label>
-                <input type="number" id="amount" name="amount" value="0"><br><br>
-            </p>
-            <center>
-                <input class="btn-primary" type="submit" value="Submit">
-            </center>
+                <p>*Donations are distibuted between our partners</p>
+                <br>
+                <p>
+                    <label for="fname">First name</label>
+                    <input type="text" id="fname" name="fname"><br><br>
+                </p>
+                <p>
+                    <label for="lname">Last name</label>
+                    <input type="text" id="lname" name="lname"><br><br>
+                </p>
+                <p>
+                    <label for="pType" width="20px">Payment type</label>
+                    <select id="pType" name="PayType">
+                        <option value="PayPal">Paypal</option>
+                        <option value="Card">Card</option>
+                        <option value="SnapScan">SnapScan</option>
+                    </select><br><br>
+                </p>
+                <p>
+                    <label for="amount">Amount</label>
+                    <input type="number" id="amount" name="amount" value="0"><br><br>
+                </p>
+                <center>
+                    <input class="btn-default" type="submit" value="Submit">
+                </center>
 
-        </fieldset>
-    }
+            </fieldset>
 
+        }
+    </div>
+    <br>
     <!-- After form is submitted the user will receive information that his/her payment was successful -->
     @{ if (IsPost)
-       {
-            <p>Donate.Info()</p>
-            <p>Donate.Message()</p>
-       }
+        {
+            <!-- <p>Donate.Info()</p>
+             <p>Donate.Message()</p>-->
+
+            <p>Thank you for your donation! It is greatly appreciated and will help many people</p>
+            <p>Feel free to sign up for our newsletter and get frequent updates on how we use your money for the greater good</p>
+        }
     }
 
-<footer>
-    <center>
-        <p><a href="./u20582006_HW04/Narrative(u20582006).pdf">Use Case Narratives</a></p>
-        <br>
-        <p><a href="./u20582006_HW04/ClassStructure(u20582006).pdf">Class Structure Diagrams</a></p>
-    </center>
-</footer>
+    <footer>
+        <center>
+            <a href="@Url.Content("~/Narrative(u20582006).pdf")">Use Case Narratives</a>
+            <br>
+            <a href="@Url.Content("~/ClassStructure(u20582006).pdf")">Class Structure Diagram</a>
+        </center>
+    </footer>
 </body>

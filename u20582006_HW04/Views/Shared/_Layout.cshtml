@@ -6,18 +6,23 @@
     <title>@ViewBag.Title u20582006_HW04</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <style>
+        .navbar {
+            margin: 0px;
+            padding: 0px;
+            border-top: solid thin black;
+            border-bottom: solid thin black;
+            fill: lightblue;
+        }
+
+        body {
+            background: url('data:image/jpeg;base64,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');background-repeat: no-repeat; background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
 </head>
 <body>
-    <!--<nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-            <img src="/logo.jpg" height="50" alt="">
-        </a>
-    </nav>
-    <ul class="nav navbar-nav">
-        <li>Html.ActionLink("About Us", "About", "Home")</li>
-        <li>Html.ActionLink("Newsletter sign up", "Newsletter", "Home")</li>
-    </ul>-->
-    <div class="navbar navbar-fixed-top">
+    <div class="navbar navbar-inverse">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -35,13 +40,9 @@
                     </ul>
                 </div>
             </div>
-             
-            
-        
-
         </div>
     </div>
-            
+
     <div class="container body-content">
         @RenderBody()
         <hr />
@@ -49,7 +50,7 @@
             <img src="~/logo.jpg" class="img-center" height="70" />
         </a>
     </div>
-    
+
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)

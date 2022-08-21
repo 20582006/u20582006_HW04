@@ -33,23 +33,23 @@
     {
 
         <div class="row">
-            <div class="column, col-lg-6, col-md-4">
+            <div class="column, col-lg-6">
                 <label for="fname">First name</label><br>
                 <input type="text" id="fname" name="fname"><br>
             </div>
-            <div class="column, col-lg-6, col-md-4">
+            <div class="column, col-lg-6">
                 <label for="lname">Last name</label><br>
                 <input type="text" id="lname" name="lname"><br>
             </div>
-            <div class="column, col-lg-6, col-md-4">
+            <div class="column, col-lg-6">
                 <label for="cname">Continent</label><br>
                 <input type="text" id="cname" name="cname"><br>
             </div>
-            <div class="column, col-lg-6, col-md-4">
+            <div class="column, col-lg-6">
                 <label for="email">Email</label><br>
                 <input type="text" id="email" name="email"><br>
             </div>
-            <br>
+            <br><br>
         </div>
         <center>
             <input class="btn-primary" type="submit" value="Submit" />
@@ -61,29 +61,157 @@
     @{ if (IsPost)
         {
             string Continent = Request.Form["cname"];
-            foreach (var user in Model)
+            <!--foreach (var user in Model)
             {
                 if (Continent == user.Continent)
                 {
-                    <p>@user.Info()</p>
+                    <p>user.Info()</p>
 
                     <table>
                         <tr>
                             <td>Name:</td>
-                            <td>@user.FirstName</td>
+                            <td>user.FirstName</td>
                         </tr>
                         <tr>
                             <td>Surname</td>
-                            <td>@user.LastName</td>
+                            <td>user.LastName</td>
                         </tr>
                         <tr>
                             <td>Email:</td>
-                            <td>@user.Email</td>
+                            <td>user.Email</td>
                         </tr>
                     </table>
 
-                    <p>@user.Message()</p>
+                    <p>user.Message()</p>
                 }
+            }-->
+
+            string Name = Request.Form["fname"];
+            if (Continent == "Africa")
+            {
+                <p>Thank you User! By signing up for the newletter you can help spread our reach and help others around you. After viewing your newsletter application we suggest you get into contact the following partner closest to you to get involved</p>
+                <br>
+                <table>
+                    <tr>
+                        <td>Name:</td>
+                        <td>John</td>
+                    </tr>
+                    <tr>
+                        <td>Surname</td>
+                        <td>Dallman</td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td>info.southafrica@emiworld.org</td>
+                    </tr>
+                </table>
+                <br>
+                <p> Thank you for you subscription </p>
+            }
+            else if (Continent == "Asia")
+            {
+                <p>Thank you User! By signing up for the newletter you can help spread our reach and help others around you. After viewing your newsletter application we suggest you get into contact the following partner closest to you to get involved</p>
+                <br>
+                <table>
+                    <tr>
+                        <td>Name:</td>
+                        <td>Paul</td>
+                    </tr>
+                    <tr>
+                        <td>Surname</td>
+                        <td>Davis</td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td>info@abwe.org</td>
+                    </tr>
+                </table>
+                <br>
+                <p> Thank you for you subscription </p>
+            }
+            else if (Continent == "Australia")
+            {
+                <p>Thank you User! By signing up for the newletter you can help spread our reach and help others around you. After viewing your newsletter application we suggest you get into contact the following partner closest to you to get involved</p>
+                <br>
+                <table>
+                    <tr>
+                        <td>Name:</td>
+                        <td>Scott</td>
+                    </tr>
+                    <tr>
+                        <td>Surname</td>
+                        <td>Rayberg</td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td>info@ewb.org.au</td>
+                    </tr>
+                </table>
+                <br>
+                <p> Thank you for you subscription </p>
+            }
+            else if (Continent == "Europe")
+            {
+                <p>Thank you User! By signing up for the newletter you can help spread our reach and help others around you. After viewing your newsletter application we suggest you get into contact the following partner closest to you to get involved</p>
+                <br>
+                <table>
+                    <tr>
+                        <td>Name:</td>
+                        <td>Phil</td>
+                    </tr>
+                    <tr>
+                        <td>Surname</td>
+                        <td>Garner</td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td>secretariat.general@feani.org</td>
+                    </tr>
+                </table>
+                <br>
+                <p> Thank you for you subscription </p>
+            }
+            else if (Continent == "North America")
+            {
+                <p>Thank you User! By signing up for the newletter you can help spread our reach and help others around you. After viewing your newsletter application we suggest you get into contact the following partner closest to you to get involved</p>
+                <br>
+                <table>
+                    <tr>
+                        <td>Name:</td>
+                        <td>David</td>
+                    </tr>
+                    <tr>
+                        <td>Surname</td>
+                        <td>Steinmen</td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td>info@nspe.org</td>
+                    </tr>
+                </table>
+                <br>
+                <p>Thank you for you subscription</p>
+            }
+            else if (Continent == "South America")
+            {
+                <p>Thank you User! By signing up for the newletter you can help spread our reach and help others around you. After viewing your newsletter application we suggest you get into contact the following partner closest to you to get involved</p>
+                <br>
+                <table>
+                    <tr>
+                        <td>Name:</td>
+                        <td>Stephen</td>
+                    </tr>
+                    <tr>
+                        <td>Surname</td>
+                        <td>Knight</td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td>info@volunteerlatinamerica.com</td>
+                    </tr>
+                </table>
+                <br>
+                <p> Thank you for you subscription </p>
             }
         }
     }
