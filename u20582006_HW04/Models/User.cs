@@ -31,7 +31,7 @@ namespace u20582006_HW04.Models
         //Is modified acording to class
         public virtual string Info()
         {
-            return "Thank you";
+            return "<br>";
         }
 
         //Forces class to provide information

@@ -31,7 +31,7 @@ namespace u20582006_HW04.Models
         //------------------------------------------------------------------------------------------------------------
         public override string Info()
         {
-            return ".";
+            return "";
         }
 
         //Message() will not be called but is an abstract class so is needed

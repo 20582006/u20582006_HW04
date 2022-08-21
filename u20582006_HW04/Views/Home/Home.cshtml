@@ -1,4 +1,5 @@
-﻿@model u20582006_HW04.Models.User
+﻿@using u20582006_HW04.Models
+@model List<Donate>
 <head>
     <style>
         h1 {
@@ -69,24 +70,19 @@
         </fieldset>
     }
 
-    <!-- Call messages -->
-    @if (ViewBag.Message != null)
-    {
-        <p>peepee poopoo</p>
-        <!--<p>User.Info()</p>
-        <p>User.Message()</p>-->
+    <!-- After form is submitted the user will receive information that his/her payment was successful -->
+    @{ if (IsPost)
+       {
+            <p>Donate.Info()</p>
+            <p>Donate.Message()</p>
+       }
     }
-    <hr />
 
-    <footer>
-        <center>
-            <p>
-                <a href="./u20582006_HW04/Narrative(u20582006).pdf">Use Case Narratives</a><br>
-                <a href="./u20582006_HW04/ClassStructure(u20582006).pdf">Class Structure Diagrams</a>
-            </p>
-        </center>
-    </footer>
-
-    <!-- Additional -->
-    <script src="https://kit.fontawesome.com/47ada06d18.js" crossorigin="anonymous"></script>
+<footer>
+    <center>
+        <p><a href="./u20582006_HW04/Narrative(u20582006).pdf">Use Case Narratives</a></p>
+        <br>
+        <p><a href="./u20582006_HW04/ClassStructure(u20582006).pdf">Class Structure Diagrams</a></p>
+    </center>
+</footer>
 </body>

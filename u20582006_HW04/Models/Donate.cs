@@ -7,7 +7,7 @@ namespace u20582006_HW04.Models
 {
     public class Donate : User
     {
-        private double _Amount;
+        private double _Amount { get; set; }
 
         public Donate (string FirstName, string LastName, double Amount) : base(FirstName, LastName) 
         {
@@ -23,7 +23,7 @@ namespace u20582006_HW04.Models
         //Message thanking donator
         public override string Info()
         {               
-            return " Your donation of" + Amount + "Is greatly appreciated and will help many people";
+            return "Thank you for your donation of" + Amount + "Is greatly appreciated and will help many people";
         }
 
         //Message after donation
